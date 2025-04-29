@@ -3,7 +3,7 @@ COPY . .
 RUN mnv package -DskipTests
 
 FROM openjdk:17.0.1-jdk-slim
-COPY --from=Build /target/BookCRUDDocker-0.01-SNAPSHOT.jar BookCRUDDocker.jar
+COPY --from=Build /target/BookCRUD-0.01-SNAPSHOT.jar BookCRUD.jar
 EXPOSE 8081
-ENTRYPOINT [ "java","-jar","BookCRUDDocker.jar"]
+ENTRYPOINT [ "java","-jar","BookCRUD.jar"]
 
